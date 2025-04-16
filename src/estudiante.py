@@ -1,4 +1,4 @@
-from materia import Materia
+from src.materia import Materia
 
 class Estudiante:
     def __init__(self, cedula: str, nombre: str):

@@ -1,6 +1,6 @@
 import csv
-from estudiante import Estudiante
-from materia import Materia
+from src.estudiante import Estudiante
+from src.materia import Materia
 
 class ControlEstudiante:
     def __init__(self):
@@ -20,7 +20,7 @@ class ControlEstudiante:
                         self.estudiantes[cedula] = Estudiante(cedula, nombre)
                     
                     materia = Materia(codigo_materia, nombre_materia)
-                    self.estudiantes[cedula].agregarMateria(materia)
+                    self.estudiantes[cedula].agregar_materia(materia)
         
         except FileNotFoundError:
             print(f"Error: Archivo no encontrado en {path}")
@@ -29,5 +29,5 @@ class ControlEstudiante:
     
     def mostrar_materias_por_estudiante(self) -> None:
         for estudiante in self.estudiantes.values():
-            cantidad = estudiante.cantidadMateriasInscriptas()
+            cantidad = estudiante.cantidad_materias_inscriptas()
             print(f"{estudiante.nombre}: {cantidad} materia{'s' if cantidad != 1 else ''}")
