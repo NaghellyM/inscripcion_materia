@@ -2,7 +2,7 @@ from unittest import TestCase
 from src.estudiante import Estudiante
 from src.materia import Materia
 
-class TestEstudiante(TestCase):
+class TestCantidadMateriasInscriptas(TestCase):
    
     def test_cantidad_materias_inscriptas(self):
         estudiante = Estudiante("9669","Daniel")
