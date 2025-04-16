@@ -6,7 +6,7 @@ class ControlEstudiante:
     def __init__(self):
         self.estudiantes = {}  # Diccionario {cedula: Estudiante}
     
-    def leerEstudianteCsv(self, path: str) -> None:
+    def leer_estudiante_csv(self, path: str) -> None:
         try:
             with open(path, mode='r', encoding='utf-8') as file:
                 reader = csv.reader(file)
@@ -27,7 +27,7 @@ class ControlEstudiante:
         except Exception as e:
             print(f"Error al procesar archivo: {str(e)}")
     
-    def mostrarMateriasPorEstudiante(self) -> None:
+    def mostrar_materias_por_estudiante(self) -> None:
         for estudiante in self.estudiantes.values():
             cantidad = estudiante.cantidadMateriasInscriptas()
             print(f"{estudiante.nombre}: {cantidad} materia{'s' if cantidad != 1 else ''}")

@@ -6,8 +6,16 @@ class Estudiante:
         self.__nombre = nombre
         self.materias = []
     
-    def agregarMateria(self, materia: Materia) -> None:
+    @property
+    def cedula(self) -> str:
+        return self.__cedula
+    
+    @property
+    def nombre(self) -> str:
+        return self.__nombre
+    
+    def agregar_materia(self, materia: Materia) -> None:
         self.materias.append(materia)
     
-    def cantidadMateriasInscriptas(self) -> int:
+    def cantidad_materias_inscriptas(self) -> int:
         return len(self.materias)

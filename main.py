@@ -2,8 +2,7 @@ from control_estudiante import ControlEstudiante
 
 def main():
     control = ControlEstudiante()
-    ruta = input("Ingrese la ruta del archivo CSV: ")
-    control.leerEstudianteCsv(ruta)
+    control.leerEstudianteCsv( "materia.txt")
     control.mostrarMateriasPorEstudiante()
 
 if __name__ == "__main__":
